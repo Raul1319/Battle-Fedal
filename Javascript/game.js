@@ -2,8 +2,12 @@ class Game {
     constructor(){
         // ELEMENTOS DEL JUEGO
         // FEDERER
+        this.federerObj = new Federer ()
         // NADAL 
+        this.nadalObj = new Nadal()
         // FONDO CANCHA
+        this.fondo = new Image()
+        this.fondo.src = "./imagenes/Fondo PNG.png"
         // PELOTAS
         // TROFEOS
     }
@@ -12,7 +16,10 @@ class Game {
 
 
 
+drawFondo = () =>{
 
+    ctx.drawImage(this.fondo, 0, 0, canvas.width, canvas.height)
+}
     // ACCIONES DEL JUEGO
     // EFECTO DE SONIDO CUANDO FEDERER AGARRA LA BOLA
     // FEDERER SE MUEVE HASTA LA MITAD.
@@ -27,11 +34,15 @@ class Game {
     // SCORE
 
     gameLoop = () => {
-        console.log("iniciando el juego")
+        //console.log("iniciando el juego")
 
         // LIMPIAR CANVAS
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
         // ACCIONES Y MOVIMIENTOS DE LOS ELEMENTOS
         //DIBUJADO DE LOS ELEMNTOS
+        this.drawFondo()
+        this.federerObj.drawFederer()
+        this.nadalObj.drawNadal()
         // CONTROL DE RECURSION
 
         requestAnimationFrame(this.gameLoop)

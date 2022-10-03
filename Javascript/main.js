@@ -11,7 +11,7 @@ let gameObj;
 //FUNCIONES DE GESTION DE ESTADO.
 
 const startGame = () => {
-    console.log("iniciando pantalla");
+    //console.log("iniciando pantalla");
 
 
     // OCULTAR PANTALLA DE INICIO

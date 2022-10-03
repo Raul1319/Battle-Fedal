@@ -23,8 +23,41 @@ class Game {
     }
 
 
-    addPelota = () =>{
-        if(this.frames % 180 === 0){
+    federerTrofeoArrayCollision = () =>{
+    this.trofeoArray.forEach((eachTrofeo) =>{
+        if (this.federerObj.x < eachTrofeo.x + eachTrofeo.w &&
+            this.federerObj.x + this.federerObj.w > eachTrofeo.x &&
+            this.federerObj.y < eachTrofeo.y + eachTrofeo.h &&
+            this.federerObj.h + this.federerObj.y > eachTrofeo.y
+        ) {
+            console.log("choqeu")
+    
+
+        }
+
+    })
+
+
+
+    }
+
+    federerPelotaCollision = () => {
+        this.pelotaArray.forEach((eachPelota) => {
+            if (this.federerObj.x < eachPelota.x + eachPelota.w &&
+                this.federerObj.x + this.federerObj.w > eachPelota.x &&
+                this.federerObj.y < eachPelota.y + eachPelota.h &&
+                this.federerObj.h + this.federerObj.y > eachPelota.y
+            ) {
+                
+            
+
+            }
+        })
+    }
+
+
+    addPelota = () => {
+        if (this.frames % 180 === 0) {
             let nuevaPelota = new Pelota()
             this.pelotaArray.push(nuevaPelota)
         }
@@ -32,23 +65,23 @@ class Game {
 
 
     addTrofeo = () => {
-        if(this.frames % 180 === 0){
+        if (this.frames % 180 === 0) {
             let nuevoTrofeo = new Trofeo()
-        this.trofeoArray.push(nuevoTrofeo)
+            this.trofeoArray.push(nuevoTrofeo)
 
         }
-        
+
     }
 
 
 
-    addNadal = () =>{
-        if(this.frames % 180 === 0){
+    addNadal = () => {
+        if (this.frames % 180 === 0) {
             let nuevoNadal = new Nadal()
             this.nadalArray.push(nuevoNadal)
 
         }
-        
+
 
     }
 
@@ -56,12 +89,11 @@ class Game {
 
         ctx.drawImage(this.fondo, 0, 0, this.width, this.height)
     }
+
+    
     // ACCIONES DEL JUEGO
     // EFECTO DE SONIDO CUANDO FEDERER AGARRA LA BOLA
     // FEDERER SE MUEVE HASTA LA MITAD.
-    // PELOTAS CAEN
-    // TROFEOS CAEN
-    // NADAL CAE
     // COLISION NADAL FEDERAR
     // COLISION PELOTAS FEDERER
     // COLISION TROFEOS FEDERER
@@ -77,15 +109,15 @@ class Game {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         // ACCIONES Y MOVIMIENTOS DE LOS ELEMENTOS
         //this.pelotaObj.downPelota()
-        this.pelotaArray.forEach((eachPelota) =>{
+        this.pelotaArray.forEach((eachPelota) => {
             eachPelota.downPelota()
         })
         //this.nadalArray.downNadal()
-        this.nadalArray.forEach((eachNadal) =>{
+        this.nadalArray.forEach((eachNadal) => {
             eachNadal.downNadal()
         })
         //this.trofeoObj.downTrofeo()
-        this.trofeoArray.forEach((eachTrofeo) =>{
+        this.trofeoArray.forEach((eachTrofeo) => {
             eachTrofeo.downTrofeo()
         })
         this.addNadal()
@@ -93,8 +125,12 @@ class Game {
         this.addTrofeo()
 
         this.addPelota()
-        
-        
+
+        this.federerPelotaCollision()
+
+        this.federerTrofeoArrayCollision()
+
+
         //DIBUJADO DE LOS ELEMNTOS
         this.drawFondo()
         this.federerObj.drawFederer()
@@ -103,21 +139,21 @@ class Game {
             eachNadal.drawNadal()
         })
         //this.pelotaObj.drawPelota()
-        this.pelotaArray.forEach((eachPelota) =>{
+        this.pelotaArray.forEach((eachPelota) => {
             eachPelota.drawPelota()
         })
         //this.trofeoObj.drawTrofeo()
-        this.trofeoArray.forEach((eachTrofeo) =>{
+        this.trofeoArray.forEach((eachTrofeo) => {
             eachTrofeo.drawTrofeo()
         })
         // CONTROL DE RECURSION
 
-        
-            requestAnimationFrame(this.gameLoop)
-        }
 
-    
+        requestAnimationFrame(this.gameLoop)
     }
+
+
+}
 
 
 

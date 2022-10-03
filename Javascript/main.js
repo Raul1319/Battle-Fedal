@@ -2,6 +2,8 @@ const canvas = document.querySelector("#my-canvas");
 const ctx = canvas.getContext("2d");
 const startScreen = document.querySelector("#splash-screen");
 const startBtn = document.querySelector("#start-btn");
+const restartbtn = document.querySelector("#restart-btn")
+const endGame = document.querySelector("#gameover-screen")
 
 
 let gameObj;
@@ -15,6 +17,7 @@ const startGame = () => {
 
 
     // OCULTAR PANTALLA DE INICIO
+    endGame.style.display = "none"
     startScreen.style.display = "none"
 
     // MOATRAR CANVAS

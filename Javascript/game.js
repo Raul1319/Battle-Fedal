@@ -23,14 +23,29 @@ class Game {
     }
 
 
+    federerNadalCollision = () =>{
+        this.nadalArray.forEach((eachNadal) =>{
+           if(this.federerObj.x < eachNadal.x + eachNadal.w &&
+            this.federerObj.x + this.federerObj.w > eachNadal.x &&
+            this.federerObj.y < eachNadal.y + eachNadal.h &&
+            this.federerObj.h + this.federerObj.y > eachNadal.y
+            ){
+                
+            }
+        })
+
+    }
+
+
     federerTrofeoArrayCollision = () =>{
-    this.trofeoArray.forEach((eachTrofeo) =>{
+    this.trofeoArray.forEach((eachTrofeo, index) =>{
         if (this.federerObj.x < eachTrofeo.x + eachTrofeo.w &&
             this.federerObj.x + this.federerObj.w > eachTrofeo.x &&
             this.federerObj.y < eachTrofeo.y + eachTrofeo.h &&
             this.federerObj.h + this.federerObj.y > eachTrofeo.y
         ) {
-            console.log("choqeu")
+            this.trofeoArray.splice(index,1)
+            this.nadalArray.pop()
     
 
         }

@@ -8,10 +8,32 @@ class Federer {
         this.y = 400;
         this.w = 50;
         this.h = 50;
+        this.moveFederer = 20;
+        this.speed = 3;
     }
 
     drawFederer = () =>{
 
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }
+
+    mueveteFedererDerecha = () =>{
+        this.x = this.x + 20;
+
+
+    }
+
+    mueveteIzquierda = () =>{
+        this.x = this.x - 20;
+
 }
+    mueveteArriba = () =>{
+        this.y = this.y - 20;
+    }
+
+
+    mueveteAbajo = () =>{
+        this.y = this.y + 20
+    }
+
+    }

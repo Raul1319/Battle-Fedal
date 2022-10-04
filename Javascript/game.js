@@ -25,6 +25,9 @@ class Game {
 
     }
 
+    
+    
+
     gameOver = () =>{
         this.isGameOn = false;
         canvas.style.display = "none"
@@ -71,14 +74,14 @@ class Game {
     }
 
     federerPelotaCollision = () => {
-        this.pelotaArray.forEach((eachPelota, index) => {
-            if (this.federerObj.x < eachPelota.x + eachPelota.w &&
+        this.pelotaArray.forEach((eachPelota,) => {
+            if (this.federerObj.x > eachPelota.x + eachPelota.w &&
                 this.federerObj.x + this.federerObj.w > eachPelota.x &&
                 this.federerObj.y < eachPelota.y + eachPelota.h &&
                 this.federerObj.h + this.federerObj.y > eachPelota.y
             ) {
-                this.pelotaArray.splice(index,1)
-            
+                this.upPelota()
+             
 
             }
         })
@@ -160,6 +163,9 @@ class Game {
         this.federerTrofeoArrayCollision()
 
         this.federerNadalCollision()
+
+        this.upPelota()
+
 
 
         //DIBUJADO DE LOS ELEMNTOS

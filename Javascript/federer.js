@@ -10,6 +10,7 @@ class Federer {
         this.h = 50;
         this.moveFederer = 20;
         this.speed = 3;
+        this.movimiento = canvas.width
     }
 
     drawFederer = () =>{
@@ -18,22 +19,22 @@ class Federer {
     }
 
     mueveteFedererDerecha = () =>{
-        this.x = this.x + 20;
+        this.x = this.x + this.moveFederer ;
 
 
     }
 
     mueveteIzquierda = () =>{
-        this.x = this.x - 20;
+        this.x = this.x - this.moveFederer;
 
 }
     mueveteArriba = () =>{
-        this.y = this.y - 20;
+        this.y = this.y - this.moveFederer;
     }
 
 
     mueveteAbajo = () =>{
-        this.y = this.y + 20
+        this.y = this.y + this.moveFederer;
     }
 
     }

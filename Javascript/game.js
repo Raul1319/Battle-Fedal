@@ -25,6 +25,10 @@ class Game {
 
     }
 
+
+    
+    
+
     
     
 
@@ -80,8 +84,7 @@ class Game {
                 this.federerObj.y < eachPelota.y + eachPelota.h &&
                 this.federerObj.h + this.federerObj.y > eachPelota.y
             ) {
-                this.upPelota()
-             
+              this.pelotaArray.pop()
 
             }
         })
@@ -164,7 +167,7 @@ class Game {
 
         this.federerNadalCollision()
 
-        this.upPelota()
+        
 
 
 

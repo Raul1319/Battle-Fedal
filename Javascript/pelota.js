@@ -9,7 +9,7 @@ class Pelota {
         this.w = 20;
         this.h = 20;
         this.speed = 1;
-        this.pelotaDirectionY = 1
+        
 
     }
 
@@ -22,11 +22,7 @@ class Pelota {
         this.y = this.y + this.speed
     }
 
-    upPelota = () =>{
-        if(this.y === this.federerObj){
-            this.pelotaDirectionY = -1
-        }
-    }
+    
 
    
 }

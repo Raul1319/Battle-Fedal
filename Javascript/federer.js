@@ -10,7 +10,6 @@ class Federer {
         this.h = 50;
         this.moveFederer = 20;
         this.speed = 3;
-        this.movimiento = canvas.width
     }
 
     drawFederer = () =>{

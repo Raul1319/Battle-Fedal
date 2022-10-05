@@ -18,7 +18,8 @@ class Federer {
     }
 
     mueveteFedererDerecha = () =>{
-        this.x = this.x + this.moveFederer ;
+        if(this.x > 500)
+        this.x = this.x  +50 ;
 
 
     }

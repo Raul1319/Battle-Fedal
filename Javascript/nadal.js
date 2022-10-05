@@ -2,7 +2,7 @@ class Nadal {
 constructor (){
 
     this.img = new Image ()
-    this.img.src = "./imagenes/Nadal(1).png"
+    this.img.src = "./imagenes/nadal.png"
     let randomNumber = Math.random() * canvas.width;
     let randomxInt = Math.floor(randomNumber);
     this.x = randomxInt;

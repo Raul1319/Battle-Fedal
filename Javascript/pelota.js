@@ -1,7 +1,7 @@
 class Pelota {
     constructor() {
         this.img = new Image()
-        this.img.src = "./imagenes/Pelota recortada.png"
+        this.img.src = "./imagenes/pelota.png"
         let randomNumber = Math.random() * canvas.width;
         let randomxInt = Math.floor(randomNumber);
         this.x = randomxInt;

@@ -8,7 +8,7 @@ class Game {
         this.nadalArray = []
         // FONDO CANCHA
         this.fondo = new Image()
-        this.fondo.src = "./imagenes/Fondo PNG.png"
+        this.fondo.src = "./imagenes/fondo.png"
         // PELOTAS
         //this.pelotaObj = new Pelota()
         this.pelotaArray = []

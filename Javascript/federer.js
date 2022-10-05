@@ -3,7 +3,7 @@ class Federer {
     constructor(){
 
         this.img = new Image ()
-        this.img.src = "./imagenes/Federer PNG.png"
+        this.img.src = "./imagenes/federer.png"
         this.x = 200;
         this.y = 400;
         this.w = 50;

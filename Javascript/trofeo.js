@@ -2,7 +2,7 @@ class Trofeo{
 
     constructor(){
         this.img = new Image()
-        this.img.src ="./imagenes/Trofeo-2-png.png"
+        this.img.src ="./imagenes/trofeo.png"
         let randomNumber = Math.random() * canvas.width;
         let randomxInt = Math.floor(randomNumber);
         this.x = randomxInt;

@@ -27,17 +27,21 @@ class Federer {
     }
 
     mueveteIzquierda = () =>{
-        if(this.x > 0){
+        if(this.x > -350){
         this.x = this.x - this.moveFederer;
         }
 }
     mueveteArriba = () =>{
-        this.y = this.y - this.moveFederer;
+        if(this.y > 0){
+            this.y = this.y - this.moveFederer;
+        }
     }
 
 
     mueveteAbajo = () =>{
-        this.y = this.y + this.moveFederer;
+        if(this.y < 540){
+            this.y = this.y + this.moveFederer;
+        }
     }
 
 }

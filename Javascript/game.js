@@ -78,13 +78,14 @@ class Game {
     }
 
     federerPelotaCollision = () => {
-        this.pelotaArray.forEach((eachPelota,) => {
+        this.pelotaArray.forEach((eachPelota,index) => {
             if (this.federerObj.x > eachPelota.x + eachPelota.w &&
                 this.federerObj.x + this.federerObj.w > eachPelota.x &&
                 this.federerObj.y < eachPelota.y + eachPelota.h &&
                 this.federerObj.h + this.federerObj.y > eachPelota.y
             ) {
-              this.pelotaArray.pop()
+              this.pelotaArray.splice(index,1)
+              
 
             }
         })

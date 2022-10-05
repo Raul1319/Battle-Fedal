@@ -18,15 +18,18 @@ class Federer {
     }
 
     mueveteFedererDerecha = () =>{
-        if(this.x > 500)
-        this.x = this.x  +50 ;
+        if(this.x < 450){
+            this.x = this.x + this.moveFederer;
+        }
+        
 
 
     }
 
     mueveteIzquierda = () =>{
+        if(this.x > 0){
         this.x = this.x - this.moveFederer;
-
+        }
 }
     mueveteArriba = () =>{
         this.y = this.y - this.moveFederer;
@@ -37,4 +40,4 @@ class Federer {
         this.y = this.y + this.moveFederer;
     }
 
-    }
+}

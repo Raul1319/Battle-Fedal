@@ -10,6 +10,8 @@ class Nadal {
         this.w = 30;
         this.h = 30;
         this.speed = 1;
+        this.counter = 0;
+        this.counter = this.speed ++
 
     }
 

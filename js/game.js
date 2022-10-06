@@ -10,7 +10,7 @@ class Game {
         this.fondo = new Image()
         this.fondo.src = "./imagenes/fondo.png"
         // PELOTAS
-        //this.pelotaObj = new Pelota()
+        this.pelotaObj = new Pelota()
         this.pelotaArray = []
         // TROFEOS
         //this.trofeoObj = new Trofeo ()
@@ -39,7 +39,7 @@ class Game {
     gameScore = () =>{
         ctx.font = "30px Arial"
         let palabra = `Score: ${this.score}`
-        ctx.fillText(palabra, canvas.width * 0.4, 500)
+        ctx.fillText(palabra, canvas.width * 0.4, 550)
     }
 
 
@@ -90,15 +90,16 @@ class Game {
     }
 
     federerPelotaCollision = () => {
-        this.pelotaArray.forEach((eachTrofeo, index) => {
-            if (this.federerObj.x < eachTrofeo.x + eachTrofeo.w &&
-                this.federerObj.x + this.federerObj.w > eachTrofeo.x &&
-                this.federerObj.y < eachTrofeo.y + eachTrofeo.h &&
-                this.federerObj.h + this.federerObj.y > eachTrofeo.y
+        this.pelotaArray.forEach((eachPelota, index) => {
+            if (this.federerObj.x < eachPelota.x + eachPelota.w &&
+                this.federerObj.x + this.federerObj.w > eachPelota.x &&
+                this.federerObj.y < eachPelota.y + eachPelota.h &&
+                this.federerObj.h + this.federerObj.y > eachPelota.y
             ) {
-
                 this.pelotaArray.splice(index, 1);
+
                 this.score = this.score + 1
+                
 
             }
         })
@@ -180,6 +181,9 @@ class Game {
         this.federerTrofeoArrayCollision()
 
         this.federerNadalCollision()
+
+
+        
 
 
 

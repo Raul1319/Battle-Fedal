@@ -9,6 +9,10 @@ class Pelota {
         this.w = 20;
         this.h = 20;
         this.speed = 1;
+        this.counter = 0;
+        this.counter = this.speed ++
+        this.pelotaDirectionY = -1
+       
 
 
     }
@@ -21,8 +25,10 @@ class Pelota {
     downPelota = () => {
         this.y = this.y + this.speed
     }
+   
+    //upPelota = () =>{
+      //this.y = this.y + (this.pelotaDirectionY * 1)
+    }
 
 
 
-
-}

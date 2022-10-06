@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(231, 156, 15);
+    background-color: black;
     text-align: center;
   }
   
@@ -23,8 +23,21 @@ body {
     justify-content: center;
     align-items: center;
     margin: 50px;
+    background-size: 50%;
   }
   
   #my-canvas, #gameover-screen{
     display: none;
+  }
+
+  h1{
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+  }
+
+  img{
+    width: 200%;
+    height: 200%;
   }

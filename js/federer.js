@@ -32,7 +32,7 @@ class Federer {
         }
 }
     mueveteArriba = () =>{
-        if(this.y > 0){
+        if(this.y > 250){
             this.y = this.y - this.moveFederer;
         }
     }

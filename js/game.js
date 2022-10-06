@@ -23,6 +23,12 @@ class Game {
 
         this.isGameOn = true;
 
+        this.score = 0;
+
+        let 
+
+        
+
     }
 
 
@@ -36,6 +42,7 @@ class Game {
         this.isGameOn = false;
         canvas.style.display = "none"
         endGame.style.display = "flex"
+        mySound.pause()
 
 
 

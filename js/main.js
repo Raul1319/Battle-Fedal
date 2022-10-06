@@ -7,13 +7,15 @@ const endGame = document.querySelector("#gameover-screen")
 
 
 let gameObj;
-
+let mySound = new Audio() 
+mySound.src = "./audio/tenis.mp3"
 
 
 //FUNCIONES DE GESTION DE ESTADO.
 
 const startGame = () => {
     //console.log("iniciando pantalla");
+    mySound.play()
 
 
     // OCULTAR PANTALLA DE INICIO
@@ -48,6 +50,7 @@ const startGame = () => {
 
 // ADDEVENTLITENERS
 startBtn.addEventListener("click", startGame)
+restartbtn.addEventListener("click", startGame )
 
 window.addEventListener("keydown", (event) => {
     if (event.code === "ArrowRight") {

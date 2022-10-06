@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
 body {
     margin: 0;
     background-color: black;
@@ -33,9 +35,10 @@ body {
   }
 
   h1{
-    color: white;
+    color: whit;
     text-align: center;
     padding: 10px;
+    font-family: 'Bungee Spice';
 
   }
 
@@ -43,4 +46,4 @@ body {
     width: 200%;
     height: 200%;
   }
-  img
+  

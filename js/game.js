@@ -24,8 +24,9 @@ class Game {
         this.isGameOn = true;
 
         this.score = 0;
+        
 
-        let 
+    
 
         
 
@@ -35,7 +36,11 @@ class Game {
 
 
 
-
+    gameScore = () =>{
+        ctx.font = "30px Arial"
+        let palabra = `Score: ${this.score}`
+        ctx.fillText(palabra, canvas.width * 0.4, 500)
+    }
 
 
     gameOver = () => {
@@ -92,7 +97,8 @@ class Game {
                 this.federerObj.h + this.federerObj.y > eachTrofeo.y
             ) {
 
-                this.pelotaArray.splice(index, 1)
+                this.pelotaArray.splice(index, 1);
+                this.score = this.score + 1
 
             }
         })
@@ -194,6 +200,7 @@ class Game {
         this.trofeoArray.forEach((eachTrofeo) => {
             eachTrofeo.drawTrofeo()
         })
+        this.gameScore()
         // CONTROL DE RECURSION
 
         if (this.isGameOn === true) {

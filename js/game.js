@@ -26,29 +26,29 @@ class Game {
     }
 
 
-    
-    
 
-    
-    
 
-    gameOver = () =>{
+
+
+
+
+    gameOver = () => {
         this.isGameOn = false;
         canvas.style.display = "none"
         endGame.style.display = "flex"
 
 
-    
+
     }
 
 
-    federerNadalCollision = () =>{
-        this.nadalArray.forEach((eachNadal) =>{
-           if(this.federerObj.x < eachNadal.x + eachNadal.w &&
-            this.federerObj.x + this.federerObj.w > eachNadal.x &&
-            this.federerObj.y < eachNadal.y + eachNadal.h &&
-            this.federerObj.h + this.federerObj.y > eachNadal.y
-            ){
+    federerNadalCollision = () => {
+        this.nadalArray.forEach((eachNadal) => {
+            if (this.federerObj.x < eachNadal.x + eachNadal.w &&
+                this.federerObj.x + this.federerObj.w > eachNadal.x &&
+                this.federerObj.y < eachNadal.y + eachNadal.h &&
+                this.federerObj.h + this.federerObj.y > eachNadal.y
+            ) {
                 this.gameOver()
 
             }
@@ -57,21 +57,21 @@ class Game {
     }
 
 
-    federerTrofeoArrayCollision = () =>{
-    this.trofeoArray.forEach((eachTrofeo, index) =>{
-        if (this.federerObj.x < eachTrofeo.x + eachTrofeo.w &&
-            this.federerObj.x + this.federerObj.w > eachTrofeo.x &&
-            this.federerObj.y < eachTrofeo.y + eachTrofeo.h &&
-            this.federerObj.h + this.federerObj.y > eachTrofeo.y
-        ) {
-            this.trofeoArray.splice(index,1)
-            this.nadalArray.pop()
+    federerTrofeoArrayCollision = () => {
+        this.trofeoArray.forEach((eachTrofeo, index) => {
+            if (this.federerObj.x < eachTrofeo.x + eachTrofeo.w &&
+                this.federerObj.x + this.federerObj.w > eachTrofeo.x &&
+                this.federerObj.y < eachTrofeo.y + eachTrofeo.h &&
+                this.federerObj.h + this.federerObj.y > eachTrofeo.y
+            ) {
+                this.trofeoArray.splice(index, 1)
+                this.nadalArray.pop()
 
-    
 
-        }
 
-    })
+            }
+
+        })
 
 
 
@@ -85,7 +85,7 @@ class Game {
                 this.federerObj.h + this.federerObj.y > eachTrofeo.y
             ) {
 
-              this.pelotaArray.splice(index,1)
+                this.pelotaArray.splice(index, 1)
 
             }
         })
@@ -126,7 +126,7 @@ class Game {
         ctx.drawImage(this.fondo, 0, 0, this.width, this.height)
     }
 
-    
+
     // ACCIONES DEL JUEGO
     // EFECTO DE SONIDO CUANDO FEDERER AGARRA LA BOLA
     // FEDERER SE MUEVE HASTA LA MITAD.
@@ -168,7 +168,7 @@ class Game {
 
         this.federerNadalCollision()
 
-        
+
 
 
 
@@ -189,10 +189,10 @@ class Game {
         })
         // CONTROL DE RECURSION
 
-        if (this.isGameOn === true){
+        if (this.isGameOn === true) {
             requestAnimationFrame(this.gameLoop)
         }
-        
+
     }
 
 

@@ -9,7 +9,7 @@ class Pelota {
         this.w = 20;
         this.h = 20;
         this.speed = 1;
-        
+
 
     }
 
@@ -18,11 +18,11 @@ class Pelota {
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }
 
-    downPelota = () =>{
+    downPelota = () => {
         this.y = this.y + this.speed
     }
 
-    
 
-   
+
+
 }

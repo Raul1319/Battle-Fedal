@@ -51,17 +51,17 @@ startBtn.addEventListener("click", startGame)
 
 window.addEventListener("keydown", (event) => {
     if (event.code === "ArrowRight") {
-        gameObj.federerObj.mueveteFedererDerecha(); 
+        gameObj.federerObj.mueveteFedererDerecha();
 
-    }if(event.code === "ArrowLeft"){
+    } if (event.code === "ArrowLeft") {
         gameObj.federerObj.mueveteIzquierda()
 
-    }if (event.code === "ArrowUp"){
+    } if (event.code === "ArrowUp") {
         gameObj.federerObj.mueveteArriba()
 
-    }else if(event.code === "ArrowDown"){
+    } else if (event.code === "ArrowDown") {
         gameObj.federerObj.mueveteAbajo()
     }
-        
+
 
 })

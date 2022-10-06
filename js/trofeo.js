@@ -1,8 +1,8 @@
-class Trofeo{
+class Trofeo {
 
-    constructor(){
+    constructor() {
         this.img = new Image()
-        this.img.src ="./imagenes/trofeo.png"
+        this.img.src = "./imagenes/trofeo.png"
         let randomNumber = Math.random() * canvas.width;
         let randomxInt = Math.floor(randomNumber);
         this.x = randomxInt;
@@ -12,11 +12,11 @@ class Trofeo{
         this.speed = 1;
     }
 
-    drawTrofeo = () =>{
+    drawTrofeo = () => {
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }
 
-    downTrofeo = () =>{
+    downTrofeo = () => {
 
         this.y = this.y + this.speed
     }

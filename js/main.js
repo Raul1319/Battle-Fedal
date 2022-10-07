@@ -16,6 +16,7 @@ mySound.src = "./audio/tenis.mp3"
 const startGame = () => {
     //console.log("iniciando pantalla");
     mySound.loop = true;
+    mySound.volume = 0.1
     mySound.play()
 
 
